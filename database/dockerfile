@@ -1,0 +1,9 @@
+# Use a MySQL image with Debian/Ubuntu support
+FROM mysql:8.0-debian
+# Install tzdata for time zone support
+RUN apt-get update && apt-get install -y tzdata
+# Set environment variables for MySQL
+ENV MYSQL_ROOT_PASSWORD root_password
+ADD ./init.sql /docker-entrypoint-initdb.d
+EXPOSE 3306
+CMD ["mysqld"]

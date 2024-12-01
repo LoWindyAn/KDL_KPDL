@@ -1,0 +1,20 @@
+# Sử dụng Python 3.10 làm base image
+FROM python:3.10-slim
+
+# Thiết lập thư mục làm việc trong container
+WORKDIR /app
+
+# Sao chép file yêu cầu từ thư mục cha vào container
+COPY ./requirements.txt .
+
+# Update pip
+RUN pip install --upgrade pip
+
+# Cài đặt các thư viện Python yêu cầu
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Sao chép tất cả các file của ứng dụng vào container
+COPY . .
+
+# Chạy ứng dụng FastAPI với Uvicorn
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000","--reload"]

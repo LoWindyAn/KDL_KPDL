@@ -1,0 +1,107 @@
+version: "1.0"
+
+services:
+  database_service:
+    build:
+      context: ./database
+      dockerfile: dockerfile
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: crypto_db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: password123
+    ports:
+      - "6603:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - private_network
+
+  database_api:
+    build:
+      context: ./database_api
+      dockerfile: dockerfile
+    ports:
+      - "8001:8001"
+    depends_on:
+      - database_service
+    volumes:
+      - ./database_api:/app
+    networks:
+      - private_network
+
+  data_ingestion_service:
+    build:
+      context: ./data_ingestion
+      dockerfile: dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - database_api
+    volumes:
+      - ./logs:/app/logs
+      - ./config:/app/config
+      - ./data_ingestion:/app
+    networks:
+      - private_network
+  # Dịch vụ phân tích dữ liệu
+  data_analysis_service:
+    build:
+      context: ./backend/data_analysis
+      dockerfile: dockerfile
+    ports:
+      - "8002:8002"
+    depends_on:
+      - database_api
+    volumes:
+      - ./backend:/app
+    networks:
+      - private_network
+  # Dịch vụ phân cụm dữ liệu
+  clustering_service:
+    build:
+      context: ./backend/clustering
+      dockerfile: Dockerfile
+    ports:
+      - "8003:8003"
+    depends_on:
+      - database_api
+    networks:
+      - private_network
+
+  # Dịch vụ dự đoán
+  prediction_service:
+    build:
+      context: ./backend/prediction
+      dockerfile: Dockerfile
+    ports:
+      - "8004:8004"
+    depends_on:
+      - database_api
+    networks:
+      - private_network
+
+  front_end_service:
+    build:
+      context: ./frontend1
+      dockerfile: dockerfile
+    ports:
+      - "5173:80"
+    depends_on:
+      - database_api
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - private_network
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
+# Định nghĩa volume ở đây
+volumes:
+  mysql_data:
+    driver: local # Sử dụng driver mặc định
+
+networks:
+  private_network:
+    driver: bridge
