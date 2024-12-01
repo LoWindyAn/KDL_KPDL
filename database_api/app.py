@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import mysql.connector
 from mysql.connector import connect, Error
 from pydantic import BaseModel
+import pandas as pd
 # Danh sách các nguồn được phép
 origins = [
     "http://localhost:5173",  
@@ -171,3 +172,27 @@ def get_resampled_prices(interval: str = Query(..., regex="^(day|week|month)$"))
     finally:
         cursor.close()
         connection.close()
+
+@app.get("/prices/correlation")
+def get_correlation_matrix():
+    connection = get_db_connection()
+    cursor = connection.cursor(dictionary=True)
+    
+    query = """
+        SELECT 
+            high_price,
+            low_price,
+            open_price,
+            close_price,
+            volume_btc,
+            volume_usd
+        FROM crypto_prices;
+    """
+    cursor.execute(query)
+    rows = cursor.fetchall()
+    
+    # Chuyển đổi dữ liệu thành DataFrame
+    df = pd.DataFrame(rows)
+    correlation_matrix = df.corr().round(2).to_dict()  # Tính correlation và chuyển thành dict
+
+    return {"correlation_matrix": correlation_matrix}

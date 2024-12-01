@@ -32,3 +32,15 @@
 2024-12-01 13:43:58 - Start crawl data
 2024-12-01 13:44:00 - End crawl data
 ===> Application DOWN - 2024-12-01 13:44:03
+===> Application UP - 2024-12-01 19:39:21
+2024-12-01 19:39:21 - Start crawl data
+2024-12-01 19:39:23 - End crawl data
+===> Application DOWN - 2024-12-01 19:39:24
+===> Application UP - 2024-12-01 21:45:41
+2024-12-01 21:45:41 - Start crawl data
+2024-12-01 21:45:42 - End crawl data
+===> Application DOWN - 2024-12-01 21:45:50
+===> Application UP - 2024-12-02 00:18:20
+2024-12-02 00:18:20 - Start crawl data
+2024-12-02 00:18:21 - End crawl data
+===> Application DOWN - 2024-12-02 00:18:26
