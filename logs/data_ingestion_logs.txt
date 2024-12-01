@@ -44,3 +44,11 @@
 2024-12-02 00:18:20 - Start crawl data
 2024-12-02 00:18:21 - End crawl data
 ===> Application DOWN - 2024-12-02 00:18:26
+===> Application UP - 2024-12-02 00:44:51
+2024-12-02 00:44:51 - Start crawl data
+2024-12-02 00:44:53 - End crawl data
+===> Application DOWN - 2024-12-02 00:45:11
+===> Application UP - 2024-12-02 01:08:59
+2024-12-02 01:08:59 - Start crawl data
+2024-12-02 01:09:00 - End crawl data
+===> Application DOWN - 2024-12-02 01:09:05

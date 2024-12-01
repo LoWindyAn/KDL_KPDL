@@ -22,8 +22,6 @@ const CorrelationChart = () => {
     labels.map((col) => correlationMatrix[row][col]),
   );
 
-  console.log(matrixData);
-
   // Tạo textMatrix: ma trận 2 chiều giống với matrixData
   const textMatrix = matrixData.map(
     (row) => row.map((value) => value.toFixed(2)), // Làm tròn và chuyển thành chuỗi

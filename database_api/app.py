@@ -4,6 +4,7 @@ import mysql.connector
 from mysql.connector import connect, Error
 from pydantic import BaseModel
 import pandas as pd
+from statsmodels.tsa.seasonal import seasonal_decompose
 # Danh sách các nguồn được phép
 origins = [
     "http://localhost:5173",  
@@ -196,3 +197,64 @@ def get_correlation_matrix():
     correlation_matrix = df.corr().round(2).to_dict()  # Tính correlation và chuyển thành dict
 
     return {"correlation_matrix": correlation_matrix}
+
+
+@app.get("/prices/trend")
+def get_trend_data(interval: str = Query(..., regex="^(day|week|month)$")):
+    """
+    Endpoint trả về dữ liệu xu hướng (trend) dựa trên resample interval.
+    - interval: "day", "week", hoặc "month"
+    """
+    connection = get_db_connection()
+    cursor = connection.cursor(dictionary=True)
+    
+    try:
+        # Mapping interval to SQL date format
+        interval_mapping = {
+            "day": "DATE(time)",
+            "week": "DATE_FORMAT(time, '%Y-%u')",
+            "month": "DATE_FORMAT(time, '%Y-%m')"
+        }
+        group_by_format = interval_mapping.get(interval)
+        if not group_by_format:
+            raise HTTPException(status_code=400, detail="Invalid interval")
+
+        # Query lấy dữ liệu resampled
+        query = f"""
+            SELECT 
+                {group_by_format} AS period,
+                AVG(close_price) AS close_price
+            FROM crypto_prices
+            GROUP BY {group_by_format}
+            ORDER BY period ASC;
+        """
+        cursor.execute(query)
+        rows = cursor.fetchall()
+
+        # Chuyển đổi thành DataFrame để phân tích trend
+        df = pd.DataFrame(rows)
+        df['period'] = pd.to_datetime(df['period'])
+        df.set_index('period', inplace=True)
+        
+        # Kiểm tra dữ liệu đủ dài để phân tích
+        if len(df) < 2:
+            raise HTTPException(status_code=400, detail="Not enough data for trend analysis")
+        
+        # Phân tích seasonal decomposition để lấy trend
+        decomposition = seasonal_decompose(df['close_price'], model='additive', period=3)  # Adjust `period` as needed
+        trend = decomposition.trend.dropna()
+        seasonal = decomposition.seasonal.dropna()
+
+        # Trả dữ liệu trend
+        response_data = {
+            "periods": trend.index.strftime('%Y-%m-%d').tolist(),
+            "trend": trend.values.tolist(),
+            "seasonal": seasonal.values.tolist()
+        }
+
+        return {"interval": interval, "data": response_data}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Error processing trend data: {e}")
+    finally:
+        cursor.close()
+        connection.close()

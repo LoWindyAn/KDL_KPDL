@@ -8,6 +8,7 @@ import MapOne from '../../components/Maps/MapOne';
 import TableOne from '../../components/Tables/TableOne';
 import TimeChart from '../../components/Charts/TimeChart';
 import CorrelationChart from '../../components/Charts/CorrelationChart';
+import TrendChart from '../../components/Charts/TrendChart';
 
 const ECommerce: React.FC = () => {
   return (
@@ -102,8 +103,13 @@ const ECommerce: React.FC = () => {
       <div className="mt-4 grid grid-cols-12 gap-4 md:mt-6 md:gap-6 2xl:mt-7.5 2xl:gap-7.5">
         {/* <ChartOne /> */}
         <TimeChart />
+        <div className="col-span-12 rounded-sm border gap-4 flex flex-col  shadow-defaul  xl:col-span-6">
+          <TrendChart title="trend" subTitle="Trend của dữ liệu" />
+          <TrendChart title="seasonal" subTitle="Seasonal line" />
+          <CorrelationChart />
+        </div>
         {/* <ChartTwo /> */}
-        <CorrelationChart />
+        <div></div>
         {/* <ChartThree /> */}
         {/* <MapOne /> */}
         {/* <div className="col-span-12 xl:col-span-8">
