@@ -5,4 +5,5 @@ pandas
 schedule
 pyyaml
 openpyxl
-sklearn
+scikit-learn
+pydantic

@@ -69,6 +69,7 @@ services:
     volumes:
       - ./backend/clustering:/app
       - ./config:/app/config
+      - ./logs:/app/logs
     networks:
       - private_network
 

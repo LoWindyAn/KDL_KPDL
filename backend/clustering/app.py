@@ -11,23 +11,8 @@ import logging
 from datetime import datetime, timezone, timedelta
 from sklearn.cluster import KMeans
 
-origins = [
-    "http://localhost:5173",  
-    "http://localhost:80",
-]
-
 app = FastAPI()
 
-# Cấu hình CORS
-app.add_middleware( 
-    CORSMiddleware,
-    allow_origins=origins, 
-    allow_credentials=True,
-    allow_methods=["*"], 
-    allow_headers=["*"], 
-)
-
-# Đọc file config để lấy thời gian interval
 def load_config():
     config_path = os.path.join(os.path.dirname(__file__), "config/xxx.yml")
     with open(config_path, "r") as f:
@@ -36,11 +21,19 @@ def load_config():
 config = load_config()
 INTERVAL_DAY = config["schedule"]["interval_cluster"]
 
+logging.basicConfig(
+    filename="logs/cluster_logs.txt", 
+    level=logging.INFO,
+    format="%(message)s",  
+)
 
+def get_vn_time():
+    vn_time = datetime.now(timezone.utc) + timedelta(hours=7)
+    timestamp_str = vn_time.strftime('%Y-%m-%d %H:%M:%S')
+    return timestamp_str
 
-@app.get('/hello')
-def hello ():
-    return {"message":"Hello world"}
+def log_event(event_type):
+    logging.info(f"{get_vn_time()} - {event_type}")
 
 def get_clustered_prices():
     # Call API để lấy dữ liệu
@@ -73,7 +66,7 @@ def get_clustered_prices():
         response = requests.post("http://database_api:8001/insert-cluster", json=body)
         response.raise_for_status()  # Kiểm tra lỗi nếu có từ API
         
-        return {"message": "Cluster data inserted successfully"}
+        log_event('CLUSTERED')
       
     except requests.RequestException as e:
         raise HTTPException(status_code=500, detail=f"Error fetching data: {e}")
@@ -87,7 +80,6 @@ def schedule_data_insertion():
 
 @app.on_event("startup")
 def on_startup():
-    # logging.info(f"===> Application UP - {get_vn_time()}")
     get_clustered_prices() 
     import threading
     threading.Thread(target=schedule_data_insertion, daemon=True).start()

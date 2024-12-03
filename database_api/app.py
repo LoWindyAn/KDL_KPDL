@@ -450,3 +450,55 @@ def get_clusters():
     finally:
         cursor.close()
         connection.close()
+
+class Prediction(BaseModel):
+    time: datetime
+    predict: float
+
+@app.post("/insert-prediction")
+async def insert_prediction(prediction: Prediction):
+    # Kết nối cơ sở dữ liệu
+    connection = get_db_connection()
+    cursor = connection.cursor()
+
+    try:
+        # Xoá tất cả dữ liệu cũ trong bảng prediction
+        cursor.execute("DELETE FROM prediction")
+
+        # Chèn dữ liệu mới vào bảng
+        insert_query = "INSERT INTO prediction (time, predict) VALUES (%s, %s)"
+        cursor.execute(insert_query, (prediction.time, prediction.predict))
+
+        # Commit thay đổi vào cơ sở dữ liệu
+        connection.commit()
+        
+        return {"message": "Prediction inserted successfully!"}
+
+    except mysql.connector.Error as err:
+        raise HTTPException(status_code=500, detail=f"Database error: {err}")
+    finally:
+        cursor.close()
+        connection.close()
+
+@app.get("/get-prediction")
+async def get_prediction():
+    # Kết nối cơ sở dữ liệu
+    connection = get_db_connection()
+    cursor = connection.cursor()
+
+    try:
+        # Lấy tất cả dữ liệu trong bảng prediction
+        cursor.execute("SELECT * FROM prediction")
+        result = cursor.fetchall()
+
+        if not result:
+            raise HTTPException(status_code=404, detail="No predictions found")
+
+        predictions = [{"time": row[0], "predict": row[1]} for row in result]
+        return predictions[0]
+
+    except mysql.connector.Error as err:
+        raise HTTPException(status_code=500, detail=f"Database error: {err}")
+    finally:
+        cursor.close()
+        connection.close()
