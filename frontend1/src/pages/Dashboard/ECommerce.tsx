@@ -9,6 +9,7 @@ import TableOne from '../../components/Tables/TableOne';
 import TimeChart from '../../components/Charts/TimeChart';
 import CorrelationChart from '../../components/Charts/CorrelationChart';
 import TrendChart from '../../components/Charts/TrendChart';
+import SpiderChart from '../../components/Charts/SpiderChart';
 
 const ECommerce: React.FC = () => {
   return (
@@ -107,6 +108,7 @@ const ECommerce: React.FC = () => {
           <TrendChart title="trend" subTitle="Trend của dữ liệu" />
           <TrendChart title="seasonal" subTitle="Seasonal line" />
           <CorrelationChart />
+          <SpiderChart />
         </div>
         {/* <ChartTwo /> */}
         <div></div>

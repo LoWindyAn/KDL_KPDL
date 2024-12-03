@@ -6,4 +6,3 @@ pandas
 fastapi[all]
 statsmodels
 pydantic
-statsmodels

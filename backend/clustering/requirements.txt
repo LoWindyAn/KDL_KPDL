@@ -6,3 +6,4 @@ pandas
 schedule
 pyyaml
 openpyxl
+scikit-learn

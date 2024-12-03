@@ -112,6 +112,7 @@ const TimeChart = () => {
           defaultValue={'day'}
           onChange={setInterval}
         >
+          {/* <Select.Option key={'hour'}>Giờ</Select.Option> */}
           <Select.Option key={'day'}>Ngày</Select.Option>
           <Select.Option key={'week'}>Tuần</Select.Option>
           <Select.Option key={'month'}>Tháng</Select.Option>

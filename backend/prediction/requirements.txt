@@ -1,8 +1,8 @@
 fastapi
 uvicorn
 requests
-mysql-connector-python
 pandas
 schedule
 pyyaml
 openpyxl
+sklearn
