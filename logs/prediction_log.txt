@@ -25,3 +25,547 @@
 2024-12-03 22:01:16 - Model saved as '/app/models/price_prediction_model.pkl'
 2024-12-03 22:01:16 - ------ END TRAINING ------
 2024-12-03 22:01:17 - Prediction: '96371.5185874999' USD
+2024-12-03 22:04:05 - Prediction: '96371.5185874999' USD
+2024-12-03 22:05:05 - Prediction: '96371.5185874999' USD
+2024-12-03 22:08:20 - Prediction: '96371.5185874999' USD
+2024-12-03 22:09:24 - Prediction: '96371.5185874999' USD
+2024-12-03 22:10:20 - ------ START TRAINING MODEL ------
+2024-12-03 22:10:20 - Preprocessing data...
+2024-12-03 22:10:22 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:10:22 - Splitting data into training and testing sets...
+2024-12-03 22:10:22 - Training model...
+2024-12-03 22:10:27 - Training took 4.40 seconds
+2024-12-03 22:10:27 - Model R^2 score: 1.00
+2024-12-03 22:10:27 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:10:27 - ------ END TRAINING ------
+2024-12-03 22:10:28 - Prediction: '96371.5185874999' USD
+2024-12-03 22:11:29 - Prediction: '96371.5185874999' USD
+2024-12-03 22:12:29 - Prediction: '96371.5185874999' USD
+2024-12-03 22:13:28 - ------ START TRAINING MODEL ------
+2024-12-03 22:13:28 - Preprocessing data...
+2024-12-03 22:13:30 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:13:30 - Splitting data into training and testing sets...
+2024-12-03 22:13:30 - Training model...
+2024-12-03 22:13:35 - Training took 4.95 seconds
+2024-12-03 22:13:35 - Model R^2 score: 1.00
+2024-12-03 22:13:35 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:13:35 - ------ END TRAINING ------
+2024-12-03 22:13:37 - Prediction: '96371.5185874999' USD
+2024-12-03 22:14:37 - Prediction: '96371.5185874999' USD
+2024-12-03 22:15:38 - Prediction: '96371.5185874999' USD
+2024-12-03 22:16:36 - ------ START TRAINING MODEL ------
+2024-12-03 22:16:37 - Preprocessing data...
+2024-12-03 22:16:39 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:16:39 - Splitting data into training and testing sets...
+2024-12-03 22:16:39 - Training model...
+2024-12-03 22:16:44 - Training took 4.93 seconds
+2024-12-03 22:16:44 - Model R^2 score: 1.00
+2024-12-03 22:16:44 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:16:44 - ------ END TRAINING ------
+2024-12-03 22:16:46 - Prediction: '96371.5185874999' USD
+2024-12-03 22:17:46 - Prediction: '96371.5185874999' USD
+2024-12-03 22:18:46 - Prediction: '96371.5185874999' USD
+2024-12-03 22:19:44 - ------ START TRAINING MODEL ------
+2024-12-03 22:19:45 - Preprocessing data...
+2024-12-03 22:19:46 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:19:46 - Splitting data into training and testing sets...
+2024-12-03 22:19:46 - Training model...
+2024-12-03 22:19:53 - Training took 6.22 seconds
+2024-12-03 22:19:53 - Model R^2 score: 1.00
+2024-12-03 22:19:53 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:19:53 - ------ END TRAINING ------
+2024-12-03 22:19:54 - Prediction: '96371.5185874999' USD
+2024-12-03 22:20:55 - Prediction: '96371.5185874999' USD
+2024-12-03 22:21:56 - Prediction: '96371.5185874999' USD
+2024-12-03 22:22:54 - ------ START TRAINING MODEL ------
+2024-12-03 22:22:54 - Preprocessing data...
+2024-12-03 22:22:55 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:22:55 - Splitting data into training and testing sets...
+2024-12-03 22:22:55 - Training model...
+2024-12-03 22:23:00 - Training took 4.92 seconds
+2024-12-03 22:23:00 - Model R^2 score: 1.00
+2024-12-03 22:23:01 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:23:01 - ------ END TRAINING ------
+2024-12-03 22:23:02 - Prediction: '96371.5185874999' USD
+2024-12-03 22:24:03 - Prediction: '96371.5185874999' USD
+2024-12-03 22:25:03 - Prediction: '96371.5185874999' USD
+2024-12-03 22:26:01 - ------ START TRAINING MODEL ------
+2024-12-03 22:26:01 - Preprocessing data...
+2024-12-03 22:26:03 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:26:03 - Splitting data into training and testing sets...
+2024-12-03 22:26:03 - Training model...
+2024-12-03 22:26:07 - Training took 4.01 seconds
+2024-12-03 22:26:07 - Model R^2 score: 1.00
+2024-12-03 22:26:07 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:26:07 - ------ END TRAINING ------
+2024-12-03 22:26:08 - Prediction: '96371.5185874999' USD
+2024-12-03 22:27:09 - Prediction: '96371.5185874999' USD
+2024-12-03 22:28:09 - Prediction: '96371.5185874999' USD
+2024-12-03 22:29:07 - ------ START TRAINING MODEL ------
+2024-12-03 22:29:07 - Preprocessing data...
+2024-12-03 22:29:08 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:29:08 - Splitting data into training and testing sets...
+2024-12-03 22:29:08 - Training model...
+2024-12-03 22:29:12 - Training took 3.86 seconds
+2024-12-03 22:29:12 - Model R^2 score: 1.00
+2024-12-03 22:29:12 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:29:12 - ------ END TRAINING ------
+2024-12-03 22:29:14 - Prediction: '96371.5185874999' USD
+2024-12-03 22:30:14 - Prediction: '96371.5185874999' USD
+2024-12-03 22:31:15 - Prediction: '96371.5185874999' USD
+2024-12-03 22:32:13 - ------ START TRAINING MODEL ------
+2024-12-03 22:32:13 - Preprocessing data...
+2024-12-03 22:32:14 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:32:14 - Splitting data into training and testing sets...
+2024-12-03 22:32:14 - Training model...
+2024-12-03 22:32:18 - Training took 3.63 seconds
+2024-12-03 22:32:18 - Model R^2 score: 1.00
+2024-12-03 22:32:18 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:32:18 - ------ END TRAINING ------
+2024-12-03 22:32:19 - Prediction: '96371.5185874999' USD
+2024-12-03 22:33:20 - Prediction: '96371.5185874999' USD
+2024-12-03 22:34:21 - Prediction: '96371.5185874999' USD
+2024-12-03 22:35:19 - ------ START TRAINING MODEL ------
+2024-12-03 22:35:19 - Preprocessing data...
+2024-12-03 22:35:20 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:35:20 - Splitting data into training and testing sets...
+2024-12-03 22:35:20 - Training model...
+2024-12-03 22:35:25 - Training took 4.32 seconds
+2024-12-03 22:35:25 - Model R^2 score: 1.00
+2024-12-03 22:35:25 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:35:25 - ------ END TRAINING ------
+2024-12-03 22:35:26 - Prediction: '96371.5185874999' USD
+2024-12-03 22:36:27 - Prediction: '96371.5185874999' USD
+2024-12-03 22:37:28 - Prediction: '96371.5185874999' USD
+2024-12-03 22:38:26 - ------ START TRAINING MODEL ------
+2024-12-03 22:38:27 - Preprocessing data...
+2024-12-03 22:38:29 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:38:29 - Splitting data into training and testing sets...
+2024-12-03 22:38:29 - Training model...
+2024-12-03 22:38:33 - Training took 4.15 seconds
+2024-12-03 22:38:33 - Model R^2 score: 1.00
+2024-12-03 22:38:33 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:38:33 - ------ END TRAINING ------
+2024-12-03 22:38:34 - Prediction: '96371.5185874999' USD
+2024-12-03 22:39:35 - Prediction: '96371.5185874999' USD
+2024-12-03 22:40:35 - Prediction: '96371.5185874999' USD
+2024-12-03 22:41:34 - ------ START TRAINING MODEL ------
+2024-12-03 22:41:34 - Preprocessing data...
+2024-12-03 22:41:35 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:41:35 - Splitting data into training and testing sets...
+2024-12-03 22:41:35 - Training model...
+2024-12-03 22:41:40 - Training took 4.39 seconds
+2024-12-03 22:41:40 - Model R^2 score: 1.00
+2024-12-03 22:41:40 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:41:40 - ------ END TRAINING ------
+2024-12-03 22:41:41 - Prediction: '96371.5185874999' USD
+2024-12-03 22:42:42 - Prediction: '96371.5185874999' USD
+2024-12-03 22:43:42 - Prediction: '96371.5185874999' USD
+2024-12-03 22:44:40 - ------ START TRAINING MODEL ------
+2024-12-03 22:44:40 - Preprocessing data...
+2024-12-03 22:44:42 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:44:42 - Splitting data into training and testing sets...
+2024-12-03 22:44:42 - Training model...
+2024-12-03 22:44:46 - Training took 3.90 seconds
+2024-12-03 22:44:46 - Model R^2 score: 1.00
+2024-12-03 22:44:46 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:44:46 - ------ END TRAINING ------
+2024-12-03 22:44:47 - Prediction: '96371.5185874999' USD
+2024-12-03 22:45:48 - Prediction: '96371.5185874999' USD
+2024-12-03 22:46:48 - Prediction: '96371.5185874999' USD
+2024-12-03 22:47:46 - ------ START TRAINING MODEL ------
+2024-12-03 22:47:46 - Preprocessing data...
+2024-12-03 22:47:48 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:47:48 - Splitting data into training and testing sets...
+2024-12-03 22:47:48 - Training model...
+2024-12-03 22:47:52 - Training took 4.56 seconds
+2024-12-03 22:47:52 - Model R^2 score: 1.00
+2024-12-03 22:47:53 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:47:53 - ------ END TRAINING ------
+2024-12-03 22:47:54 - Prediction: '96371.5185874999' USD
+2024-12-03 22:48:55 - Prediction: '96371.5185874999' USD
+2024-12-03 22:49:55 - Prediction: '96371.5185874999' USD
+2024-12-03 22:50:53 - ------ START TRAINING MODEL ------
+2024-12-03 22:50:54 - Preprocessing data...
+2024-12-03 22:50:56 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:50:56 - Splitting data into training and testing sets...
+2024-12-03 22:50:56 - Training model...
+2024-12-03 22:51:03 - Training took 7.31 seconds
+2024-12-03 22:51:03 - Model R^2 score: 1.00
+2024-12-03 22:51:04 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:51:04 - ------ END TRAINING ------
+2024-12-03 22:51:06 - Prediction: '96371.5185874999' USD
+2024-12-03 22:52:06 - Prediction: '96371.5185874999' USD
+2024-12-03 22:53:07 - Prediction: '96371.5185874999' USD
+2024-12-03 22:54:05 - ------ START TRAINING MODEL ------
+2024-12-03 22:54:05 - Preprocessing data...
+2024-12-03 22:54:07 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:54:07 - Splitting data into training and testing sets...
+2024-12-03 22:54:07 - Training model...
+2024-12-03 22:54:12 - Training took 4.91 seconds
+2024-12-03 22:54:12 - Model R^2 score: 1.00
+2024-12-03 22:54:12 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:54:12 - ------ END TRAINING ------
+2024-12-03 22:54:13 - Prediction: '96371.5185874999' USD
+2024-12-03 22:55:14 - Prediction: '96371.5185874999' USD
+2024-12-03 22:56:14 - Prediction: '96371.5185874999' USD
+2024-12-03 22:57:12 - ------ START TRAINING MODEL ------
+2024-12-03 22:57:13 - Preprocessing data...
+2024-12-03 22:57:14 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 22:57:14 - Splitting data into training and testing sets...
+2024-12-03 22:57:14 - Training model...
+2024-12-03 22:57:19 - Training took 4.43 seconds
+2024-12-03 22:57:19 - Model R^2 score: 1.00
+2024-12-03 22:57:19 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 22:57:19 - ------ END TRAINING ------
+2024-12-03 22:57:20 - Prediction: '96371.5185874999' USD
+2024-12-03 22:58:21 - Prediction: '96371.5185874999' USD
+2024-12-03 22:59:22 - Prediction: '96371.5185874999' USD
+2024-12-03 23:00:19 - ------ START TRAINING MODEL ------
+2024-12-03 23:00:19 - Preprocessing data...
+2024-12-03 23:00:21 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:00:21 - Splitting data into training and testing sets...
+2024-12-03 23:00:21 - Training model...
+2024-12-03 23:00:25 - Training took 4.40 seconds
+2024-12-03 23:00:25 - Model R^2 score: 1.00
+2024-12-03 23:00:25 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:00:25 - ------ END TRAINING ------
+2024-12-03 23:00:27 - Prediction: '96422.60590857828' USD
+2024-12-03 23:01:27 - Prediction: '96422.60590857828' USD
+2024-12-03 23:02:28 - Prediction: '96422.60590857828' USD
+2024-12-03 23:03:26 - ------ START TRAINING MODEL ------
+2024-12-03 23:03:27 - Preprocessing data...
+2024-12-03 23:03:28 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:03:28 - Splitting data into training and testing sets...
+2024-12-03 23:03:28 - Training model...
+2024-12-03 23:03:33 - Training took 4.72 seconds
+2024-12-03 23:03:33 - Model R^2 score: 1.00
+2024-12-03 23:03:33 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:03:33 - ------ END TRAINING ------
+2024-12-03 23:03:35 - Prediction: '96422.60590857828' USD
+2024-12-03 23:04:36 - Prediction: '96422.60590857828' USD
+2024-12-03 23:05:37 - Prediction: '96422.60590857828' USD
+2024-12-03 23:06:34 - ------ START TRAINING MODEL ------
+2024-12-03 23:06:34 - Preprocessing data...
+2024-12-03 23:06:35 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:06:35 - Splitting data into training and testing sets...
+2024-12-03 23:06:36 - Training model...
+2024-12-03 23:06:39 - Training took 3.88 seconds
+2024-12-03 23:06:39 - Model R^2 score: 1.00
+2024-12-03 23:06:40 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:06:40 - ------ END TRAINING ------
+2024-12-03 23:06:41 - Prediction: '96422.60590857828' USD
+2024-12-03 23:07:42 - Prediction: '96422.60590857828' USD
+2024-12-03 23:08:42 - Prediction: '96422.60590857828' USD
+2024-12-03 23:09:40 - ------ START TRAINING MODEL ------
+2024-12-03 23:09:41 - Preprocessing data...
+2024-12-03 23:09:44 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:09:44 - Splitting data into training and testing sets...
+2024-12-03 23:09:44 - Training model...
+2024-12-03 23:09:49 - Training took 5.27 seconds
+2024-12-03 23:09:49 - Model R^2 score: 1.00
+2024-12-03 23:09:49 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:09:49 - ------ END TRAINING ------
+2024-12-03 23:09:50 - Prediction: '96422.60590857828' USD
+2024-12-03 23:10:52 - Prediction: '96422.60590857828' USD
+2024-12-03 23:11:52 - Prediction: '96422.60590857828' USD
+2024-12-03 23:12:50 - ------ START TRAINING MODEL ------
+2024-12-03 23:12:50 - Preprocessing data...
+2024-12-03 23:12:52 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:12:52 - Splitting data into training and testing sets...
+2024-12-03 23:12:52 - Training model...
+2024-12-03 23:12:56 - Training took 3.95 seconds
+2024-12-03 23:12:56 - Model R^2 score: 1.00
+2024-12-03 23:12:56 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:12:56 - ------ END TRAINING ------
+2024-12-03 23:12:57 - Prediction: '96422.60590857828' USD
+2024-12-03 23:13:58 - Prediction: '96422.60590857828' USD
+2024-12-03 23:14:59 - Prediction: '96422.60590857828' USD
+2024-12-03 23:15:57 - ------ START TRAINING MODEL ------
+2024-12-03 23:15:57 - Preprocessing data...
+2024-12-03 23:15:59 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:15:59 - Splitting data into training and testing sets...
+2024-12-03 23:15:59 - Training model...
+2024-12-03 23:16:04 - Training took 4.47 seconds
+2024-12-03 23:16:04 - Model R^2 score: 1.00
+2024-12-03 23:16:04 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:16:04 - ------ END TRAINING ------
+2024-12-03 23:16:05 - Prediction: '96422.60590857828' USD
+2024-12-03 23:17:06 - Prediction: '96422.60590857828' USD
+2024-12-03 23:18:10 - Prediction: '96422.60590857828' USD
+2024-12-03 23:19:04 - ------ START TRAINING MODEL ------
+2024-12-03 23:19:04 - Preprocessing data...
+2024-12-03 23:19:06 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:19:06 - Splitting data into training and testing sets...
+2024-12-03 23:19:06 - Training model...
+2024-12-03 23:19:11 - Training took 5.27 seconds
+2024-12-03 23:19:11 - Model R^2 score: 1.00
+2024-12-03 23:19:12 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:19:12 - ------ END TRAINING ------
+2024-12-03 23:19:16 - Prediction: '96422.60590857828' USD
+2024-12-03 23:20:17 - Prediction: '96422.60590857828' USD
+2024-12-03 23:21:17 - Prediction: '96422.60590857828' USD
+2024-12-03 23:22:12 - ------ START TRAINING MODEL ------
+2024-12-03 23:22:12 - Preprocessing data...
+2024-12-03 23:22:14 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:22:14 - Splitting data into training and testing sets...
+2024-12-03 23:22:14 - Training model...
+2024-12-03 23:22:18 - Training took 4.50 seconds
+2024-12-03 23:22:18 - Model R^2 score: 1.00
+2024-12-03 23:22:19 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:22:19 - ------ END TRAINING ------
+2024-12-03 23:22:20 - Prediction: '96422.60590857828' USD
+2024-12-03 23:23:21 - Prediction: '96422.60590857828' USD
+2024-12-03 23:24:21 - Prediction: '96422.60590857828' USD
+2024-12-03 23:25:19 - ------ START TRAINING MODEL ------
+2024-12-03 23:25:19 - Preprocessing data...
+2024-12-03 23:25:21 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:25:21 - Splitting data into training and testing sets...
+2024-12-03 23:25:21 - Training model...
+2024-12-03 23:25:26 - Training took 5.14 seconds
+2024-12-03 23:25:26 - Model R^2 score: 1.00
+2024-12-03 23:25:26 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:25:27 - ------ END TRAINING ------
+2024-12-03 23:25:28 - Prediction: '96422.60590857828' USD
+2024-12-03 23:26:29 - Prediction: '96422.60590857828' USD
+2024-12-03 23:27:29 - Prediction: '96422.60590857828' USD
+2024-12-03 23:28:27 - ------ START TRAINING MODEL ------
+2024-12-03 23:28:28 - Preprocessing data...
+2024-12-03 23:28:29 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:28:29 - Splitting data into training and testing sets...
+2024-12-03 23:28:29 - Training model...
+2024-12-03 23:28:33 - Training took 4.19 seconds
+2024-12-03 23:28:33 - Model R^2 score: 1.00
+2024-12-03 23:28:33 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:28:33 - ------ END TRAINING ------
+2024-12-03 23:28:35 - Prediction: '96422.60590857828' USD
+2024-12-03 23:29:35 - Prediction: '96422.60590857828' USD
+2024-12-03 23:30:36 - Prediction: '96422.60590857828' USD
+2024-12-03 23:31:34 - ------ START TRAINING MODEL ------
+2024-12-03 23:31:34 - Preprocessing data...
+2024-12-03 23:31:35 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:31:35 - Splitting data into training and testing sets...
+2024-12-03 23:31:35 - Training model...
+2024-12-03 23:31:39 - Training took 3.87 seconds
+2024-12-03 23:31:39 - Model R^2 score: 1.00
+2024-12-03 23:31:39 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:31:39 - ------ END TRAINING ------
+2024-12-03 23:31:41 - Prediction: '96422.60590857828' USD
+2024-12-03 23:32:41 - Prediction: '96422.60590857828' USD
+2024-12-03 23:33:41 - Prediction: '96422.60590857828' USD
+2024-12-03 23:34:39 - ------ START TRAINING MODEL ------
+2024-12-03 23:34:40 - Preprocessing data...
+2024-12-03 23:34:41 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:34:41 - Splitting data into training and testing sets...
+2024-12-03 23:34:41 - Training model...
+2024-12-03 23:34:46 - Training took 4.41 seconds
+2024-12-03 23:34:46 - Model R^2 score: 1.00
+2024-12-03 23:34:46 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:34:46 - ------ END TRAINING ------
+2024-12-03 23:34:47 - Prediction: '96422.60590857828' USD
+2024-12-03 23:35:48 - Prediction: '96422.60590857828' USD
+2024-12-03 23:36:50 - Prediction: '96422.60590857828' USD
+2024-12-03 23:37:46 - ------ START TRAINING MODEL ------
+2024-12-03 23:37:47 - Preprocessing data...
+2024-12-03 23:37:48 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:37:48 - Splitting data into training and testing sets...
+2024-12-03 23:37:48 - Training model...
+2024-12-03 23:37:54 - Training took 5.95 seconds
+2024-12-03 23:37:54 - Model R^2 score: 1.00
+2024-12-03 23:37:54 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:37:54 - ------ END TRAINING ------
+2024-12-03 23:37:58 - Prediction: '96422.60590857828' USD
+2024-12-03 23:38:58 - Prediction: '96422.60590857828' USD
+2024-12-03 23:39:59 - Prediction: '96422.60590857828' USD
+2024-12-03 23:40:55 - ------ START TRAINING MODEL ------
+2024-12-03 23:40:55 - Preprocessing data...
+2024-12-03 23:40:57 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:40:57 - Splitting data into training and testing sets...
+2024-12-03 23:40:57 - Training model...
+2024-12-03 23:41:03 - Training took 5.37 seconds
+2024-12-03 23:41:03 - Model R^2 score: 1.00
+2024-12-03 23:41:03 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:41:03 - ------ END TRAINING ------
+2024-12-03 23:41:04 - Prediction: '96422.60590857828' USD
+2024-12-03 23:42:05 - Prediction: '96422.60590857828' USD
+2024-12-03 23:43:06 - Prediction: '96422.60590857828' USD
+2024-12-03 23:44:03 - ------ START TRAINING MODEL ------
+2024-12-03 23:44:04 - Preprocessing data...
+2024-12-03 23:44:06 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:44:06 - Splitting data into training and testing sets...
+2024-12-03 23:44:06 - Training model...
+2024-12-03 23:44:10 - Training took 4.09 seconds
+2024-12-03 23:44:10 - Model R^2 score: 1.00
+2024-12-03 23:44:11 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:44:11 - ------ END TRAINING ------
+2024-12-03 23:44:12 - Prediction: '96422.60590857828' USD
+2024-12-03 23:45:14 - Prediction: '96422.60590857828' USD
+2024-12-03 23:46:14 - Prediction: '96422.60590857828' USD
+2024-12-03 23:47:11 - ------ START TRAINING MODEL ------
+2024-12-03 23:47:12 - Preprocessing data...
+2024-12-03 23:47:13 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:47:13 - Splitting data into training and testing sets...
+2024-12-03 23:47:13 - Training model...
+2024-12-03 23:47:18 - Training took 4.46 seconds
+2024-12-03 23:47:18 - Model R^2 score: 1.00
+2024-12-03 23:47:18 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:47:18 - ------ END TRAINING ------
+2024-12-03 23:47:19 - Prediction: '96422.60590857828' USD
+2024-12-03 23:48:20 - Prediction: '96422.60590857828' USD
+2024-12-03 23:49:20 - Prediction: '96422.60590857828' USD
+2024-12-03 23:50:18 - ------ START TRAINING MODEL ------
+2024-12-03 23:50:19 - Preprocessing data...
+2024-12-03 23:50:21 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:50:21 - Splitting data into training and testing sets...
+2024-12-03 23:50:21 - Training model...
+2024-12-03 23:50:25 - Training took 4.73 seconds
+2024-12-03 23:50:26 - Model R^2 score: 1.00
+2024-12-03 23:50:26 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:50:26 - ------ END TRAINING ------
+2024-12-03 23:50:27 - Prediction: '96422.60590857828' USD
+2024-12-03 23:51:28 - Prediction: '96422.60590857828' USD
+2024-12-03 23:52:28 - Prediction: '96422.60590857828' USD
+2024-12-03 23:53:26 - ------ START TRAINING MODEL ------
+2024-12-03 23:53:28 - Preprocessing data...
+2024-12-03 23:53:31 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:53:31 - Splitting data into training and testing sets...
+2024-12-03 23:53:31 - Training model...
+2024-12-03 23:53:35 - Training took 4.43 seconds
+2024-12-03 23:53:35 - Model R^2 score: 1.00
+2024-12-03 23:53:36 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:53:36 - ------ END TRAINING ------
+2024-12-03 23:53:37 - Prediction: '96422.60590857828' USD
+2024-12-03 23:54:38 - Prediction: '96422.60590857828' USD
+2024-12-03 23:55:38 - Prediction: '96422.60590857828' USD
+2024-12-03 23:56:36 - ------ START TRAINING MODEL ------
+2024-12-03 23:56:37 - Preprocessing data...
+2024-12-03 23:56:38 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:56:38 - Splitting data into training and testing sets...
+2024-12-03 23:56:38 - Training model...
+2024-12-03 23:56:42 - Training took 4.08 seconds
+2024-12-03 23:56:42 - Model R^2 score: 1.00
+2024-12-03 23:56:42 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:56:42 - ------ END TRAINING ------
+2024-12-03 23:56:43 - Prediction: '96422.60590857828' USD
+2024-12-03 23:57:44 - Prediction: '96422.60590857828' USD
+2024-12-03 23:58:44 - Prediction: '96422.60590857828' USD
+2024-12-03 23:59:43 - ------ START TRAINING MODEL ------
+2024-12-03 23:59:43 - Preprocessing data...
+2024-12-03 23:59:44 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-03 23:59:44 - Splitting data into training and testing sets...
+2024-12-03 23:59:44 - Training model...
+2024-12-03 23:59:49 - Training took 4.26 seconds
+2024-12-03 23:59:49 - Model R^2 score: 1.00
+2024-12-03 23:59:49 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-03 23:59:49 - ------ END TRAINING ------
+2024-12-03 23:59:50 - Prediction: '96422.60590857828' USD
+2024-12-04 00:00:52 - Prediction: '96422.60590857828' USD
+2024-12-04 00:01:54 - Prediction: '96422.60590857828' USD
+2024-12-04 00:02:50 - ------ START TRAINING MODEL ------
+2024-12-04 00:02:50 - Preprocessing data...
+2024-12-04 00:02:51 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-04 00:02:51 - Splitting data into training and testing sets...
+2024-12-04 00:02:51 - Training model...
+2024-12-04 00:02:55 - Training took 4.19 seconds
+2024-12-04 00:02:55 - Model R^2 score: 1.00
+2024-12-04 00:02:56 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-04 00:02:56 - ------ END TRAINING ------
+2024-12-04 00:02:57 - Prediction: '96422.60590857828' USD
+2024-12-04 00:03:58 - Prediction: '96422.60590857828' USD
+2024-12-04 00:04:58 - Prediction: '96422.60590857828' USD
+2024-12-04 00:05:56 - ------ START TRAINING MODEL ------
+2024-12-04 00:05:57 - Preprocessing data...
+2024-12-04 00:06:00 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-04 00:06:00 - Splitting data into training and testing sets...
+2024-12-04 00:06:00 - Training model...
+2024-12-04 00:06:05 - Training took 4.47 seconds
+2024-12-04 00:06:05 - Model R^2 score: 1.00
+2024-12-04 00:06:05 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-04 00:06:05 - ------ END TRAINING ------
+2024-12-04 00:06:06 - Prediction: '96422.60590857828' USD
+2024-12-04 00:07:07 - Prediction: '96422.60590857828' USD
+2024-12-04 00:08:08 - Prediction: '96422.60590857828' USD
+2024-12-04 00:09:06 - ------ START TRAINING MODEL ------
+2024-12-04 00:09:07 - Preprocessing data...
+2024-12-04 00:09:09 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-04 00:09:09 - Splitting data into training and testing sets...
+2024-12-04 00:09:09 - Training model...
+2024-12-04 00:09:14 - Training took 5.77 seconds
+2024-12-04 00:09:14 - Model R^2 score: 1.00
+2024-12-04 00:09:15 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-04 00:09:15 - ------ END TRAINING ------
+2024-12-04 00:09:16 - Prediction: '96422.60590857828' USD
+2024-12-04 00:10:17 - Prediction: '96422.60590857828' USD
+2024-12-04 00:11:18 - Prediction: '96422.60590857828' USD
+2024-12-04 00:12:15 - ------ START TRAINING MODEL ------
+2024-12-04 00:12:16 - Preprocessing data...
+2024-12-04 00:12:18 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-04 00:12:18 - Splitting data into training and testing sets...
+2024-12-04 00:12:18 - Training model...
+2024-12-04 00:12:22 - Training took 4.42 seconds
+2024-12-04 00:12:22 - Model R^2 score: 1.00
+2024-12-04 00:12:22 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-04 00:12:22 - ------ END TRAINING ------
+2024-12-04 00:12:24 - Prediction: '96422.60590857828' USD
+2024-12-04 00:13:28 - Prediction: '96422.60590857828' USD
+2024-12-04 00:14:29 - Prediction: '96422.60590857828' USD
+2024-12-04 00:15:23 - ------ START TRAINING MODEL ------
+2024-12-04 00:15:23 - Preprocessing data...
+2024-12-04 00:15:25 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-04 00:15:25 - Splitting data into training and testing sets...
+2024-12-04 00:15:25 - Training model...
+2024-12-04 00:15:29 - Training took 4.54 seconds
+2024-12-04 00:15:29 - Model R^2 score: 1.00
+2024-12-04 00:15:29 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-04 00:15:29 - ------ END TRAINING ------
+2024-12-04 00:15:31 - Prediction: '96422.60590857828' USD
+2024-12-04 00:16:32 - Prediction: '96422.60590857828' USD
+2024-12-04 00:17:33 - Prediction: '96422.60590857828' USD
+2024-12-04 00:18:30 - ------ START TRAINING MODEL ------
+2024-12-04 00:18:35 - Preprocessing data...
+2024-12-04 00:18:38 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-04 00:18:38 - Splitting data into training and testing sets...
+2024-12-04 00:18:38 - Training model...
+2024-12-04 00:18:45 - Training took 7.01 seconds
+2024-12-04 00:18:45 - Model R^2 score: 1.00
+2024-12-04 00:18:46 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-04 00:18:46 - ------ END TRAINING ------
+2024-12-04 00:18:49 - Prediction: '96422.60590857828' USD
+2024-12-04 00:19:50 - Prediction: '96422.60590857828' USD
+2024-12-04 00:20:51 - Prediction: '96422.60590857828' USD
+2024-12-04 00:21:46 - ------ START TRAINING MODEL ------
+2024-12-04 00:21:47 - Preprocessing data...
+2024-12-04 00:21:49 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-04 00:21:49 - Splitting data into training and testing sets...
+2024-12-04 00:21:49 - Training model...
+2024-12-04 00:21:54 - Training took 4.93 seconds
+2024-12-04 00:21:54 - Model R^2 score: 1.00
+2024-12-04 00:21:54 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-04 00:21:54 - ------ END TRAINING ------
+2024-12-04 00:21:57 - Prediction: '96422.60590857828' USD
+2024-12-04 00:22:58 - Prediction: '96422.60590857828' USD
+2024-12-04 00:23:59 - Prediction: '96422.60590857828' USD
+2024-12-04 00:24:55 - ------ START TRAINING MODEL ------
+2024-12-04 00:24:56 - Preprocessing data...
+2024-12-04 00:25:00 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-04 00:25:00 - Splitting data into training and testing sets...
+2024-12-04 00:25:00 - Training model...
+2024-12-04 00:25:05 - Training took 5.32 seconds
+2024-12-04 00:25:05 - Model R^2 score: 1.00
+2024-12-04 00:25:06 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-04 00:25:06 - ------ END TRAINING ------
+2024-12-04 00:25:07 - Prediction: '96422.60590857828' USD
+2024-12-04 00:26:08 - Prediction: '96422.60590857828' USD
+2024-12-04 00:27:08 - Prediction: '96422.60590857828' USD
+2024-12-04 00:28:06 - ------ START TRAINING MODEL ------
+2024-12-04 00:28:07 - Preprocessing data...
+2024-12-04 00:28:08 - Features shape: (2994, 28), Labels shape: (2994,)
+2024-12-04 00:28:08 - Splitting data into training and testing sets...
+2024-12-04 00:28:08 - Training model...
+2024-12-04 00:28:12 - Training took 4.39 seconds
+2024-12-04 00:28:12 - Model R^2 score: 1.00
+2024-12-04 00:28:13 - Model saved as '/app/models/price_prediction_model.pkl'
+2024-12-04 00:28:13 - ------ END TRAINING ------
+2024-12-04 00:28:14 - Prediction: '96422.60590857828' USD
+2024-12-04 00:29:15 - Prediction: '96422.60590857828' USD
+2024-12-04 00:30:15 - Prediction: '96422.60590857828' USD

@@ -47,7 +47,7 @@ const CorrelationChart = () => {
           },
         ]}
         layout={{
-          title: 'Correlation Heatmap',
+          title: 'Correlation Matrix',
           xaxis: {
             automargin: true,
           },

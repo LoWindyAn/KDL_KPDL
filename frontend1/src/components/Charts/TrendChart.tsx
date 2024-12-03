@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 
 const TrendChart = ({ title, subTitle }: any) => {
-  const [interval, setInterval] = useState('day');
+  const [interval, setInterval] = useState('month');
   const [chartData, setChartData] = useState<any>(null);
 
   const { data } = useQuery({
@@ -50,7 +50,7 @@ const TrendChart = ({ title, subTitle }: any) => {
         </h2>
         <Select
           className="w-[100px]"
-          defaultValue={'day'}
+          defaultValue={'month'}
           onChange={setInterval}
         >
           <Select.Option key={'day'}>Ngày</Select.Option>
