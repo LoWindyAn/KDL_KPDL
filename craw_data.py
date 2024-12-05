@@ -4,7 +4,7 @@ import pandas as pd
 
 # Thời gian bắt đầu (3 năm trước từ hiện tại)
 end_time = int(time.time())  # Timestamps hiện tại
-start_time = end_time - (8 * 365 * 24 * 60 * 60)  # 3 năm trước
+start_time = end_time - (3 * 365 * 24 * 60 * 60)  # 3 năm trước
 
 # API endpoint và các tham số
 url = "https://min-api.cryptocompare.com/data/v2/histohour"
@@ -63,7 +63,7 @@ df.rename(columns={
 df = df[['time', 'high_price','low_price', 'open_price', 'close_price','volume_btc','volume_usd']]
 
 # Xuất ra file CSV
-output_file = 'bitcoin_data_8_years.csv'
+output_file = 'bitcoin_data_3_years1.csv'
 df.to_csv(output_file, index=False)
 
 print(f"Data exported to {output_file}")

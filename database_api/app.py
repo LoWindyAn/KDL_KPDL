@@ -122,10 +122,10 @@ def get_prices_resampling_day(start_date: str = None, days: int = 0):
     else:
         start_date = datetime.today()
 
-    if days > 0:
-        end_date = start_date - timedelta(days=days)
+    if days == 0:
+        end_date = datetime(2000, 1, 1)  
     else:
-        end_date = datetime(2000, 1, 1)  # Chỉ lấy dữ liệu từ ngày trước đó
+        end_date = start_date - timedelta(days=(days-1))
 
     query = f"""
         SELECT 
@@ -143,7 +143,7 @@ def get_prices_resampling_day(start_date: str = None, days: int = 0):
     try:
         cursor.execute(query, (end_date, start_date))
         results = cursor.fetchall()
-        return {"count":len(results), "data": results}
+        return {"count": len(results), "data": results}
     except Error as e:
         raise HTTPException(status_code=400, detail=f"Database error: {e}")
     finally:
@@ -159,16 +159,14 @@ def get_price_to_dwm(interval: str = Query(..., regex="^(day|week|month)$")):
     cursor = connection.cursor(dictionary=True)
     
     try:
-        # Lấy thời gian hiện tại
         current_time = datetime.now()
 
-        # Dựa vào interval, xác định khoảng thời gian lọc
         if interval == "day":
-            start_time = current_time - timedelta(days=1)  # 24 giờ qua
+            start_time = current_time - timedelta(days=1)  
         elif interval == "week":
-            start_time = current_time - timedelta(weeks=1)  # 7 ngày qua
+            start_time = current_time - timedelta(weeks=1)  
         elif interval == "month":
-            start_time = current_time - timedelta(days=30)  # 30 ngày qua
+            start_time = current_time - timedelta(days=30)  
 
         query = f"""
             SELECT *

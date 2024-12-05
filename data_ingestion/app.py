@@ -18,7 +18,7 @@ def load_config():
         config = yaml.safe_load(f)
     return config
 config = load_config()
-INTERVAL_MINUTES = config["schedule"]["interval_minutes"]
+INTERVAL_HOUR = config["schedule"]["interval_ingestion"]
 
 # Thiết lập logging để ghi vào file log
 logging.basicConfig(
@@ -76,7 +76,7 @@ def insert_to_db():
     
 
 def schedule_data_insertion():
-    schedule.every(INTERVAL_MINUTES).minutes.do(insert_to_db)  
+    schedule.every(INTERVAL_HOUR).hours.do(insert_to_db)  
 
     while True:  
         schedule.run_pending()  

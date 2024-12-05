@@ -91,7 +91,7 @@ services:
 
   front_end_service:
     build:
-      context: ./frontend1
+      context: ./frontend
       dockerfile: dockerfile
     ports:
       - "5173:80"

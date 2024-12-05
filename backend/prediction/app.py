@@ -16,6 +16,14 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+def load_config():
+    config_path = os.path.join(os.path.dirname(__file__), "config/xxx.yml")
+    with open(config_path, "r") as f:
+        config = yaml.safe_load(f)
+    return config
+config = load_config()
+INTERVAL_MIN = config["schedule"]["interval_minutes"]
+
 logging.basicConfig(
     filename="logs/prediction_log.txt", 
     level=logging.INFO,
@@ -38,22 +46,19 @@ def preprocess_data(data):
     features = []
     labels = []
     
-    # Thay vì bắt đầu từ 7, bạn sẽ tạo một cửa sổ di động (sliding window) kích thước 7
-    # và sau đó dịch cửa sổ đó ra ngoài một ngày mỗi lần (gối lên nhau).
-    for i in range(7, len(df)-1):  # Bắt đầu từ ngày 7, vì cần 7 ngày trước đó
-        # Tạo đặc trưng cho 7 ngày trước đó (tạo một chuỗi các giá trị)
+    for i in range(7, len(df)-1):  
         feature = df.iloc[i-7:i][["open_price", "high_price", "low_price", "close_price"]].values.flatten()
         features.append(feature)
         
-        # Nhãn là giá đóng cửa của ngày tiếp theo (ngày thứ 8 sau 7 ngày trước)
         labels.append(df.iloc[i+1]["close_price"])
 
     return np.array(features), np.array(labels)
 
+@app.get("/train_model_prediction")
 def train_model():
     try:
         print("Fetching data from API...")
-        response = requests.get("http://database_api:8001/prices/resampling-day?days=0")
+        response = requests.get("http://database_api:8001/prices/resampling-day")
         if response.status_code == 200:
             data = response.json()["data"]
 
@@ -78,6 +83,7 @@ def train_model():
             model_path = "/app/models/price_prediction_model.pkl"
             joblib.dump(model, model_path)
             log_event(f"Model saved as '{model_path}'")
+            return {"message": "Train models success"}
 
     except requests.RequestException as e:
         raise HTTPException(status_code=500, detail=f"Error fetching data: {e}")
@@ -97,7 +103,7 @@ def preprocess_input(data: PricePredictionRequest):
 @app.get("/prediction")
 def prediction_price_next_day():
     try:
-        response = requests.get("http://database_api:8001/prices/resampling-day?days=6")
+        response = requests.get("http://database_api:8001/prices/resampling-day?days=7")
         if response.status_code == 200:
             data = response.json()["data"]
             result = {
@@ -114,6 +120,7 @@ def prediction_price_next_day():
             response = requests.post("http://database_api:8001/insert-prediction", json=body)
             response.raise_for_status() 
             log_event(f"Prediction: '{prediction[-1]}' USD")
+            return {"predict": prediction[-1], "time":tomorrow}
     except requests.RequestException as e:
         raise HTTPException(status_code=500, detail=f"Error fetching data: {e}")    
 
@@ -123,15 +130,15 @@ def train_model_periodically():
     log_event("------ END TRAINING ------")
 
 def schedule_data_insertion():
-    schedule.every(1).minutes.do(prediction_price_next_day)  
-    schedule.every(3).minutes.do(train_model_periodically)
+    schedule.every(INTERVAL_MIN).minutes.do(prediction_price_next_day)  
+    schedule.every(1).days.do(train_model_periodically)
     while True:  
         schedule.run_pending()  
         time.sleep(1)  
 
 @app.on_event("startup")
 def on_startup():
-    # logging.info(f"===> Application UP - {get_vn_time()}")
+    prediction_price_next_day()
     import threading
     threading.Thread(target=schedule_data_insertion, daemon=True).start()
 
