@@ -6,7 +6,7 @@ const CorrelationChart = () => {
   const { data: correlationMatrix } = useQuery({
     queryKey: ['correlation-data'],
     queryFn: async () => {
-      const res = await axios.get('http://localhost:8001/prices/correlation');
+      const res = await axios.get('http://localhost:8001/correlation');
       return res.data?.correlation_matrix;
     },
     refetchInterval: 300000,

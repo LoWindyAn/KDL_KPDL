@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+//@ts-ignore
 import { Radar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,

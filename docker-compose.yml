@@ -54,7 +54,9 @@ services:
     depends_on:
       - database_api
     volumes:
-      - ./backend:/app
+      - ./backend/data_analysis:/app
+      - ./config:/app/config
+      - ./logs:/app/logs
     networks:
       - private_network
 

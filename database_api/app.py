@@ -5,7 +5,7 @@ from mysql.connector import connect, Error
 from pydantic import BaseModel
 import pandas as pd
 from statsmodels.tsa.seasonal import seasonal_decompose
-from typing import List
+from typing import List, Dict
 from datetime import datetime, timedelta
 origins = [
     "http://localhost:5173",  
@@ -249,28 +249,74 @@ def get_price_to_dwm(interval: str = Query(..., regex="^(day|week|month)$")):
         cursor.close()
         connection.close()
 
-@app.get("/prices/correlation")
-def get_correlation_matrix():
-    connection = get_db_connection()
-    cursor = connection.cursor(dictionary=True)
-    
-    query = """
-        SELECT 
-            high_price,
-            low_price,
-            open_price,
-            close_price,
-            volume_btc,
-            volume_usd
-        FROM crypto_prices;
-    """
-    cursor.execute(query)
-    rows = cursor.fetchall()
-    
-    df = pd.DataFrame(rows)
-    correlation_matrix = df.corr().round(2).to_dict()  
+# Pydantic model for input data
+class CorrelationData(BaseModel):
+    data: Dict[str, Dict[str, float]]
 
-    return {"correlation_matrix": correlation_matrix}
+# API endpoint
+@app.post("/insert-correlation")
+def insert_correlation(correlation_data: CorrelationData):
+    try:
+        connection = get_db_connection()
+        if not connection:
+            raise HTTPException(status_code=500, detail="Database connection failed")
+        
+        cursor = connection.cursor()
+
+        # Prepare SQL query for insertion
+        insert_query = """
+        INSERT INTO correlation_matrix (metric1, metric2, correlation)
+        VALUES (%s, %s, %s)
+        ON DUPLICATE KEY UPDATE correlation = VALUES(correlation);
+        """
+
+        # Insert data into the database
+        for metric1, correlations in correlation_data.data.items():
+            for metric2, value in correlations.items():
+                cursor.execute(insert_query, (metric1, metric2, value))
+      
+        cursor.close()
+        connection.commit()
+        return {"message": "Correlation data inserted successfully"}
+
+    except mysql.connector.Error as e:
+        raise HTTPException(status_code=500, detail=f"Database error: {e}")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"An error occurred: {e}")
+
+@app.get("/correlation")
+def get_correlation():
+    try:
+        # Kết nối với cơ sở dữ liệu
+        connection = get_db_connection()
+        
+        if not connection:
+            raise HTTPException(status_code=500, detail="Database connection failed")
+        
+        cursor = connection.cursor()
+
+        # Truy vấn dữ liệu từ bảng correlation_matrix
+        cursor.execute("SELECT metric1, metric2, correlation FROM correlation_matrix")
+        rows = cursor.fetchall()
+
+        # Tái tạo cấu trúc JSON
+        result = {}
+        for metric1, metric2, correlation in rows:
+            if metric1 not in result:
+                result[metric1] = {}
+            result[metric1][metric2] = correlation
+
+        # Đóng kết nối
+        cursor.close()
+        connection.close()
+
+        return {"correlation_matrix": result}
+
+    except mysql.connector.Error as e:
+        raise HTTPException(status_code=500, detail=f"Database error: {e}")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"An error occurred: {e}")
+
 
 
 @app.get("/prices/trend")

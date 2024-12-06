@@ -23,4 +23,11 @@ CREATE TABLE IF NOT EXISTS clusters (
 CREATE TABLE IF NOT EXISTS prediction (
     time DATETIME PRIMARY KEY, 
     predict FLOAT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS correlation_matrix (
+    metric1 VARCHAR(50),
+    metric2 VARCHAR(50),
+    correlation FLOAT,
+    PRIMARY KEY (metric1, metric2)
 )

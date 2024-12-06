@@ -1,7 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Line } from 'react-chartjs-2'; // Import Line chart from Chart.js
+//@ts-ignore
+import { Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
   CategoryScale,
